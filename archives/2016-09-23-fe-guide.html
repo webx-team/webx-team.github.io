@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>前端规范 - WEBX</title>
+<meta name="description" content="前端规范_WEBX_搜索搜索WEB研发部">
+<meta name="keywords" content="前端规范,WEBX, web, sogou搜索">
+<link rel="stylesheet" href="/static/css/common.css">
+<script src="/static/js/vue-2.0.0.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsersupport">您使用的浏览器版本<strong>已过时</strong>，请<a href="http://browsehappy.com/">使用现代浏览器</a></p>
+<![endif]-->
+<header class="simple-header" id="app">
+    <div class="simple-header-inner">
+        <a class="simple-header-logo" href="/" alt="">
+            <img src="/static/img/logo.png" alt="" />
+        </a>
+        <nav class="simple-header-nav">
+            <ul class="simple-header-nav-list">
+                
+                    <li class="simple-header-nav-item ">
+                        <a href="/">Home</a>
+                    </li>
+                
+                    <li class="simple-header-nav-item active">
+                        <a href="/archives">Archives</a>
+                    </li>
+                
+                    <li class="simple-header-nav-item ">
+                        <a href="/categories">Categories</a>
+                    </li>
+                
+                    <li class="simple-header-nav-item ">
+                        <a href="/tags">Tags</a>
+                    </li>
+                
+                    <li class="simple-header-nav-item ">
+                        <a href="/about">About</a>
+                    </li>
+                
+            </ul>
+        </nav>
+        <i class="simple-header-dir iconfont icon-dir" @click="clickIconDir"></i>
+    </div>
+</header>
+
+
+
+<div class="simple-body">
+    <div class="simple-body-main">
+        <article class="simple-article">
+            <div class="simple-article-info">
+                <h1 class="title">前端规范</h1>
+                <div class="meta">
+                    <span>Benjamin</span>
+                    <span>发布于</span>
+                    <time>2016-09-23 14:56:25</time>
+                </div>
+            </div>
+            <div class="simple-article-content markdown-body">
+                <h1>CSS / SCSS 编码规范</h1>
+<h2>目录</h2>
+<ul>
+<li><a href="#tab">缩进</a></li>
+<li><a href="#semicolon">分号</a></li>
+<li><a href="#quote">引号</a></li>
+<li><a href="#space">空格</a></li>
+<li><a href="#space-line">空行</a></li>
+<li><a href="#br">换行</a></li>
+<li><a href="#comment">注释</a></li>
+<li><a href="#attribute">属性</a></li>
+<li><a href="#name-rule">命名</a></li>
+<li><a href="#selector">选择器</a></li>
+<li><a href="#other">其它</a></li>
+</ul>
+<p><a name="tab"></a></p>
+<h2>缩进</h2>
+<p>使用 Tab 缩进(4个空格)</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector" >.class</span> <span class="token punctuation" >{</span>
+    <span class="token property" >color</span><span class="token punctuation" >:</span> #f00<span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><a name="semicolon"></a></p>
+<h2>分号</h2>
+<p>每个属性声明结尾需要加分号</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector" >.className</span> <span class="token punctuation" >{</span>
+    <span class="token property" >color</span><span class="token punctuation" >:</span> #f00<span class="token punctuation" >;</span>
+    <span class="token property" >font-size</span><span class="token punctuation" >:</span> 16px<span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="quote"></a></p>
+<h2>引号</h2>
+<ul>
+<li>统一使用双引号，单双引号交替</li>
+<li>url的内容要用引号</li>
+<li>属性选择器中的属性值需要引号</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property" >background</span><span class="token punctuation" >:</span> <span class="token url" >url("./image/sogou-logou.png")</span> no-repeat<span class="token punctuation" >;</span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="space"></a></p>
+<h2>空格</h2>
+<ul>
+<li>
+<p>不需要空格的情况</p>
+<ul>
+<li>属性名后</li>
+<li>多个规则的分隔符','前</li>
+<li>!important '!'后</li>
+<li>属性值中'('后和')'前</li>
+<li>行末不要有多余的空格</li>
+</ul>
+</li>
+<li>
+<p>需要空格的情况</p>
+<ul>
+<li>属性值前</li>
+<li>多个属性值间</li>
+<li>选择器'&gt;', '+', '~'前后</li>
+<li>'{'前</li>
+<li>!important '!'前</li>
+<li>@else 前后</li>
+<li>属性值中的','后</li>
+<li>注释 '/<em>' 后和 '</em>/' 前</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector" >.className</span> <span class="token punctuation" >{</span>
+    <span class="token property" >border</span><span class="token punctuation" >:</span> 1px solid #f00<span class="token selector" >;
+    .span</span> <span class="token punctuation" >{</span>
+        <span class="token property" >color</span><span class="token punctuation" >:</span> #f00<span class="token punctuation" >;</span>
+        <span class="token property" >font-size</span><span class="token punctuation" >:</span> 12px<span class="token punctuation" >;</span>
+        <span class="token property" >background-color</span><span class="token punctuation" >:</span> <span class="token function" >rgba</span><span class="token punctuation" >(</span>0, 0, 255, 0.5<span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+    <span class="token punctuation" >}</span>
+<span class="token punctuation" >}</span>
+
+<span class="token atrule" ><span class="token rule" >@if</span><span class="token punctuation" >(</span>index > 0<span class="token punctuation" >)</span></span> <span class="token punctuation" >{</span>
+    <span class="token selector" >background-</span><span class="token punctuation" >{</span>$index<span class="token punctuation" >}</span><span class="token punctuation" >:</span> <span class="token url" >url("./image/icon-{$index}.png")</span><span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span> <span class="token atrule" ><span class="token rule" >@else</span></span> <span class="token punctuation" >{</span>
+    <span class="token property" >background</span><span class="token punctuation" >:</span> none<span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="space-line"></a></p>
+<h2>空行</h2>
+<ul>
+<li>'}'后最好跟一个空行，包括scss中嵌套的规则</li>
+<li>属性较多时需要适当的空行，参见csscombo 插件顺序</li>
+</ul>
+<p><a name="br"></a></p>
+<h2>换行</h2>
+<ul>
+<li>
+<p>不需要换行的情况</p>
+<ul>
+<li>'{'前</li>
+</ul>
+</li>
+<li>
+<p>需要换行的情况</p>
+<ul>
+<li>'{'后和'}'前</li>
+<li>每个属性独占一行</li>
+<li>多个规则的分隔符','后</li>
+</ul>
+</li>
+</ul>
+<p><a name="comment"></a></p>
+<h2>注释</h2>
+<ul>
+<li>统一使用 '/* */'</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* module class */</span>
+<span class="token selector" >.module</span> <span class="token punctuation" >{</span>
+    <span class="token comment" spellcheck="true">/* todo */</span>
+<span class="token punctuation" >}</span>
+
+<span class="token comment" spellcheck="true">/**
+ * 多行注释
+ * 注意事项
+ */</span>
+<span class="token selector" >.module</span> <span class="token punctuation" >{</span>
+    <span class="token comment" spellcheck="true">/* todo */</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="attribute"></a></p>
+<h2>属性</h2>
+<ul>
+<li>相同十六进制颜色属性使用3个字母</li>
+<li>多个属性如果能合并，必须合并，如：border, padding, margin, background, etc;</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 不推荐 */</span>
+<span class="token selector" >.className</span> <span class="token punctuation" >{</span>
+    <span class="token property" >background-color</span><span class="token punctuation" >:</span> #cccccc<span class="token punctuation" >;</span>
+    <span class="token property" >background</span><span class="token punctuation" >:</span> <span class="token url" >url("./image/logo.png")</span><span class="token punctuation" >;</span>
+    <span class="token property" >background-repeat</span><span class="token punctuation" >:</span> no-repeat<span class="token punctuation" >;</span>
+    <span class="token property" >background-size</span><span class="token punctuation" >:</span> 100% 100%<span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span>
+
+<span class="token comment" spellcheck="true">/* 推荐 */</span>
+<span class="token selector" >.className</span> <span class="token punctuation" >{</span>
+    <span class="token property" >background</span><span class="token punctuation" >:</span> #ccc <span class="token url" >url("./image/logo.png")</span> no-repeat center center / 100% 100%<span class="token punctuation" >;</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="name-rule"></a></p>
+<h2>命名</h2>
+<ul>
+<li>类名使用小写字母，以中划线分隔(其中JS类名采用 [JS-*] 格式)</li>
+<li>id采用驼峰式命名</li>
+<li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
+</ul>
+<p><a name="selector"></a></p>
+<h2>选择器</h2>
+<ul>
+<li>使用CSS3 选择器语法</li>
+<li>尽量少使用 '*' 选择器</li>
+<li>避免多层标签选择器做为子选择器</li>
+</ul>
+<p><a name="other"></a></p>
+<h2>其它</h2>
+<ul>
+<li>不允许有空的规则</li>
+<li>元素选择器用小写字母</li>
+<li>去掉小数点前面的0</li>
+<li>去掉数字中不必要的小数点和末尾的0</li>
+<li>属性值'0'后面不要加单位</li>
+<li>无前缀的标准属性应该写在有前缀的属性后面</li>
+<li>不要在同个规则里出现重复的属性</li>
+<li>不要在一个文件里出现两个相同的规则</li>
+<li>用 border: 0; 代替 border: none;</li>
+<li>选择器不要超过4层</li>
+<li>发布的代码中不要有 @import</li>
+</ul>
+
+            </div>
+        </article>
+    </div>
+    <div class="simple-body-sidebar">
+    <div class="simple-sidebar-qrcode">
+        <img src="/static/img/qrcode.png" />
+    </div>
+    <dl class="simple-sidebar-dlist">
+        <dt>友情链接</dt>
+        
+            <dd>
+                <a href="https://m.sogou.com" title="搜狗搜索">搜狗搜索</a>
+            </dd>
+        
+            <dd>
+                <a href="https://m.sogou.com" title="搜狗音乐">搜狗音乐</a>
+            </dd>
+        
+            <dd>
+                <a href="https://m.sogou.com" title="搜狗小说">搜狗小说</a>
+            </dd>
+        
+            <dd>
+                <a href="https://m.sogou.com" title="搜狗图片">搜狗图片</a>
+            </dd>
+        
+            <dd>
+                <a href="https://m.sogou.com" title="搜狗地图">搜狗地图</a>
+            </dd>
+        
+    </dl>
+</div>
+</div>
+<footer class="simple-footer">
+    <span class="copyrights">Copyrights © 2016 zuojj. All Rights Reserved. </span>
+</footer>
+<script type="text/javascript" src="/static/js/base.js"></script>
+</body>
+</html>
