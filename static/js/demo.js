@@ -1,1 +1,0 @@
-!function(n,o){function t(){console.log("test"+c)}var c="";t()}(window);
