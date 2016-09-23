@@ -1,12 +1,12 @@
 ---
-title: React 教程-article-01
-author: Benjamin
-date: 2016-09-23 14:52:37
-picName: city-01.jpg
-categories: React, Javascript, FE
-tags: React,Web
+title: Markdown-syntax
+author: zblog
+date: 2016-09-23 16:52:33
+picName: city-04.jpg
+categories: zblog
+tags: zblog
 ---
-# Markdown Syntax
+  # Markdown Syntax
 A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).
 
 * [Block Elements](#block-elements)
