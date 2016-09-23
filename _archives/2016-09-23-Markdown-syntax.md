@@ -1,10 +1,10 @@
 ---
 title: Markdown-syntax
-author: zblog
+author: benjamin
 date: 2016-09-23 16:52:33
 picName: city-04.jpg
-categories: zblog
-tags: zblog
+categories: markdown
+tags: markdown
 ---
   # Markdown Syntax
 A markdown example shows how to write a markdown file. This document integrates core syntax and extensions (GMF).
