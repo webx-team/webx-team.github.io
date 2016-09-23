@@ -63,38 +63,214 @@
                 </div>
             </div>
             <div class="simple-article-content markdown-body">
-                <h1>CSS / SCSS 编码规范</h1>
-<h2>目录</h2>
+                <h2>目录</h2>
 <ul>
-<li><a href="#tab">缩进</a></li>
-<li><a href="#semicolon">分号</a></li>
-<li><a href="#quote">引号</a></li>
-<li><a href="#space">空格</a></li>
-<li><a href="#space-line">空行</a></li>
-<li><a href="#br">换行</a></li>
-<li><a href="#comment">注释</a></li>
-<li><a href="#attribute">属性</a></li>
-<li><a href="#name-rule">命名</a></li>
-<li><a href="#selector">选择器</a></li>
-<li><a href="#other">其它</a></li>
+<li><a href="#name">命名规范</a>
+<ul>
+<li><a href="#name-project">项目命名</a></li>
+<li><a href="#name-dir">目录命名</a></li>
+<li><a href="#name-file">文件命名</a></li>
+<li><a href="#name-image">图片命名</a></li>
 </ul>
-<p><a name="tab"></a></p>
-<h2>缩进</h2>
+</li>
+<li><a href="#html">HTML 编码规范</a>
+<ul>
+<li><a href="#html-grammer">文档语法</a></li>
+<li><a href="#html-doctype">文档声明</a></li>
+<li><a href="#html-charset">文档编码</a></li>
+<li><a href="#html-language">文档语言</a></li>
+<li><a href="#html-mode">文档模式</a></li>
+<li><a href="#html-attr-define">属性声明</a></li>
+<li><a href="#html-attr-sort">属性顺序</a></li>
+<li><a href="#html-special-char">特殊字符</a></li>
+<li><a href="#html-resource">资源引入</a></li>
+</ul>
+</li>
+<li><a href="#css">CSS / SCSS 编码规范</a>
+<ul>
+<li><a href="#css-tab">缩进</a></li>
+<li><a href="#css-semicolon">分号</a></li>
+<li><a href="#css-quote">引号</a></li>
+<li><a href="#css-space">空格</a></li>
+<li><a href="#css-space-line">空行</a></li>
+<li><a href="#css-br">换行</a></li>
+<li><a href="#css-comment">注释</a></li>
+<li><a href="#css-attribute">属性</a></li>
+<li><a href="#css-name-rule">命名</a></li>
+<li><a href="#css-selector">选择器</a></li>
+<li><a href="#css-other">其它</a></li>
+</ul>
+</li>
+<li><a href="#js">JAVASCRIPT 编码规范</a>
+<ul>
+<li><a href="#js-tab">缩进</a></li>
+<li><a href="#js-semicolon">分号</a></li>
+<li><a href="#js-quote">引号</a></li>
+<li><a href="#js-space">空格</a></li>
+<li><a href="#js-space-line">空行</a></li>
+<li><a href="#js-br">换行</a></li>
+<li><a href="#js-comment">注释</a></li>
+<li><a href="#js-variable">变量</a></li>
+<li><a href="#js-other">其它</a></li>
+<li><a href="#js-operator">运算符</a></li>
+</ul>
+</li>
+<li><a href="#sublime">SUBLIME 编辑器插件</a>
+<ul>
+<li><a href="#sublime-settings">SUBLIME 配置</a></li>
+<li><a href="#sublime-plugins">SUBLIME 插件</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="#name"></a></p>
+<h2>命名规范</h2>
+<p><a name="#name-project"></a></p>
+<h3>项目命名</h3>
+<p>project_name</p>
+<p><a name="#name-dir"></a></p>
+<h3>目录命名</h3>
+<ul>
+<li>css   目录： css</li>
+<li>js    目录： js</li>
+<li>image 目录： img</li>
+<li>icon  目录： icon</li>
+</ul>
+<p><a name="#name-file"></a></p>
+<h3>文件命名</h3>
+<p>尽量语义化，以下划线分割</p>
+<p><a name="#name-image"></a></p>
+<h3>图片命名</h3>
+<p>业务线(可选) + 图片功能类别(必选) + 图片精度()</p>
+<ul>
+<li>
+<p>所属业务线</p>
+<ul>
+<li>ps_: 网页</li>
+<li>my_: 明医</li>
+</ul>
+</li>
+<li>
+<p>图片功能类别：</p>
+<ul>
+<li>icon_：icon 图标</li>
+<li>logo_：logo 图片</li>
+<li>spr_：单页面CSS Sprites 合并图片</li>
+<li>btn_：按钮图片</li>
+<li>bg_：背景图片</li>
+</ul>
+</li>
+<li>
+<p>图片精度：</p>
+<ul>
+<li>普清：@1x</li>
+<li>Retina：@2x | @3x</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html">ps_logo_sogou@2x.png
+ps_bg_banner@1x.jpg
+<span class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><a name="#html"></a></p>
+<h2>HTML 编码规范</h2>
+<p><a name="html-grammer"></a></p>
+<h3>文档语法</h3>
+<ul>
+<li>使用 Tab 缩进（4个空格）</li>
+<li>节点嵌套应该缩进，包括块级元素和行内元素</li>
+<li>标签属性采用双引号，不要使用单引号</li>
+<li>属性名全小写，采用中划线做分隔符</li>
+<li>标签闭合（即使 HTML5 规范中某些标签可选）</li>
+</ul>
+<p><a name="html-doctype"></a></p>
+<h3>文档声明</h3>
+<p>HTML 文档必须包含文档声明，采用统一的 HTML5 文档声明：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype" >&lt;!DOCTYPE html></span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="html-charset"></a></p>
+<h3>文档编码</h3>
+<p>新建文档统一采用 UTF-8 编码</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>meta</span> <span class="token attr-name" >charset</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>UTF-8<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p>若由于历史原因，有些项目使用 GBK 编码，建议如下写法</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>meta</span> <span class="token attr-name" >charset</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>GBK<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="html-language"></a></p>
+<h3>文档语言</h3>
+<p>根据HTML5规范：</p>
+<blockquote>
+<p>应在html标签上加上lang属性。这会给语音工具和翻译工具帮助，告诉它们应当怎么去发音和翻译。</p>
+</blockquote>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>html</span> <span class="token attr-name" >lang</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>zh-CN<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+    
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>html</span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><a name="html-mode"></a></p>
+<h3>文档模式</h3>
+<p>使用 <meta> 标签可以指定页面应该用什么版本的IE来渲染。</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>meta</span> <span class="token attr-name" >http-equiv</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>X-UA-Compatible<span class="token punctuation" >"</span></span> <span class="token attr-name" >content</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>IE<span class="token punctuation" >=</span>Edge<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="html-attr-define"></a></p>
+<h3>属性声明</h3>
+<ul>
+<li>自定义属性以 [data-*] 开头，以支持 HTML5 规范 dataset 集合</li>
+<li>boolean 属性不需要声明属性值，HTML5 不需要，但是 XHTML 需要声明每个属性的属性值</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html">    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >data-index</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>1<span class="token punctuation" >"</span></span> <span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>input</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>checkbox<span class="token punctuation" >"</span></span> <span class="token attr-name" >disabled</span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><a name="html-attr-sort"></a></p>
+<h3>属性顺序</h3>
+<ul>
+<li>class (可复用选择器)</li>
+<li>id (唯一性选择器)</li>
+<li>name</li>
+<li>data-*</li>
+<li>src, for, type, href, value , max-length, max, min, pattern</li>
+<li>placeholder, title, alt</li>
+<li>required, readonly, disabled, selected</li>
+<li>...</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>className<span class="token punctuation" >"</span></span> <span class="token attr-name" >id</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span><span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="html-special-char"></a></p>
+<h3>特殊字符引用</h3>
+<p>建议使用特殊实体</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- 推荐 --></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>首页 <span class="token entity" title="&gt;">&amp;gt;</span> 一级目录 <span class="token entity" title="&gt;">&amp;gt;</span> 二级目录<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+
+<span class="token comment" spellcheck="true">&lt;!-- 不推荐 --></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>div</span><span class="token punctuation" >></span></span>首页 > 一级目录 > 二级目录<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>div</span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="html-resource"></a></p>
+<h3>资源引入</h3>
+<p>根据 HTML5 规范，在引入CSS和JS时不需要指明 type，因为 text/css 和 text/javascript 分别是他们的默认值。</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>link</span> <span class="token attr-name" >rel</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>stylesheet<span class="token punctuation" >"</span></span> <span class="token attr-name" >href</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>#<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>style</span><span class="token punctuation" >></span></span><span class="token style language-css" >
+    <span class="token comment" spellcheck="true">/* style */</span>
+</span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>style</span><span class="token punctuation" >></span></span>
+
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>script</span> <span class="token attr-name" >src</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>feg.js<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span><span class="token script language-javascript" ></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>script</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>script</span><span class="token punctuation" >></span></span><span class="token script language-javascript" ><span class="token comment" spellcheck="true">/* alert('FEG'); */</span></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>script</span><span class="token punctuation" >></span></span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="#css"></a></p>
+<h2>CSS / SCSS 编码规范</h2>
+<p><a name="css-tab"></a></p>
+<h3>缩进</h3>
 <p>使用 Tab 缩进(4个空格)</p>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token selector" >.class</span> <span class="token punctuation" >{</span>
     <span class="token property" >color</span><span class="token punctuation" >:</span> #f00<span class="token punctuation" >;</span>
 <span class="token punctuation" >}</span>
 <span class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><a name="semicolon"></a></p>
-<h2>分号</h2>
+<p><a name="css-semicolon"></a></p>
+<h3>分号</h3>
 <p>每个属性声明结尾需要加分号</p>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token selector" >.className</span> <span class="token punctuation" >{</span>
     <span class="token property" >color</span><span class="token punctuation" >:</span> #f00<span class="token punctuation" >;</span>
     <span class="token property" >font-size</span><span class="token punctuation" >:</span> 16px<span class="token punctuation" >;</span>
 <span class="token punctuation" >}</span>
 <span class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a name="quote"></a></p>
-<h2>引号</h2>
+<p><a name="css-quote"></a></p>
+<h3>引号</h3>
 <ul>
 <li>统一使用双引号，单双引号交替</li>
 <li>url的内容要用引号</li>
@@ -102,8 +278,8 @@
 </ul>
 <pre class="line-numbers language-css"><code class="language-css"><span class="token property" >background</span><span class="token punctuation" >:</span> <span class="token url" >url("./image/sogou-logou.png")</span> no-repeat<span class="token punctuation" >;</span>
 <span class="line-numbers-rows"><span></span></span></code></pre>
-<p><a name="space"></a></p>
-<h2>空格</h2>
+<p><a name="css-space"></a></p>
+<h3>空格</h3>
 <ul>
 <li>
 <p>不需要空格的情况</p>
@@ -144,14 +320,14 @@
     <span class="token property" >background</span><span class="token punctuation" >:</span> none<span class="token punctuation" >;</span>
 <span class="token punctuation" >}</span>
 <span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a name="space-line"></a></p>
-<h2>空行</h2>
+<p><a name="css-space-line"></a></p>
+<h3>空行</h3>
 <ul>
 <li>'}'后最好跟一个空行，包括scss中嵌套的规则</li>
 <li>属性较多时需要适当的空行，参见csscombo 插件顺序</li>
 </ul>
-<p><a name="br"></a></p>
-<h2>换行</h2>
+<p><a name="css-br"></a></p>
+<h3>换行</h3>
 <ul>
 <li>
 <p>不需要换行的情况</p>
@@ -168,8 +344,8 @@
 </ul>
 </li>
 </ul>
-<p><a name="comment"></a></p>
-<h2>注释</h2>
+<p><a name="css-comment"></a></p>
+<h3>注释</h3>
 <ul>
 <li>统一使用 '/* */'</li>
 </ul>
@@ -186,8 +362,8 @@
     <span class="token comment" spellcheck="true">/* todo */</span>
 <span class="token punctuation" >}</span>
 <span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a name="attribute"></a></p>
-<h2>属性</h2>
+<p><a name="css-attribute"></a></p>
+<h3>属性</h3>
 <ul>
 <li>相同十六进制颜色属性使用3个字母</li>
 <li>多个属性如果能合并，必须合并，如：border, padding, margin, background, etc;</li>
@@ -205,22 +381,22 @@
     <span class="token property" >background</span><span class="token punctuation" >:</span> #ccc <span class="token url" >url("./image/logo.png")</span> no-repeat center center / 100% 100%<span class="token punctuation" >;</span>
 <span class="token punctuation" >}</span>
 <span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a name="name-rule"></a></p>
-<h2>命名</h2>
+<p><a name="css-name-rule"></a></p>
+<h3>命名</h3>
 <ul>
 <li>类名使用小写字母，以中划线分隔(其中JS类名采用 [JS-*] 格式)</li>
 <li>id采用驼峰式命名</li>
 <li>scss中的变量、函数、混合、placeholder采用驼峰式命名</li>
 </ul>
-<p><a name="selector"></a></p>
-<h2>选择器</h2>
+<p><a name="css-selector"></a></p>
+<h3>选择器</h3>
 <ul>
 <li>使用CSS3 选择器语法</li>
 <li>尽量少使用 '*' 选择器</li>
 <li>避免多层标签选择器做为子选择器</li>
 </ul>
-<p><a name="other"></a></p>
-<h2>其它</h2>
+<p><a name="css-other"></a></p>
+<h3>其它</h3>
 <ul>
 <li>不允许有空的规则</li>
 <li>元素选择器用小写字母</li>
@@ -233,6 +409,321 @@
 <li>用 border: 0; 代替 border: none;</li>
 <li>选择器不要超过4层</li>
 <li>发布的代码中不要有 @import</li>
+</ul>
+<p><a name="#js"></a></p>
+<h2>JAVASCRIPT 编码规范</h2>
+<p><a name="js-tab"></a></p>
+<h2>缩进</h2>
+<p>使用 Tab 缩进(4个空格)</p>
+<p><a name="js-semicolon"></a></p>
+<h2>分号</h2>
+<p>需在后面加分号的情况：</p>
+<ul>
+<li>变量声明</li>
+<li>表达式(包括函数表达式)</li>
+<li>return</li>
+<li>throw</li>
+<li>break</li>
+<li>continue</li>
+<li>do-while</li>
+</ul>
+<p><a name="js-quote"></a></p>
+<h2>引号</h2>
+<p>最外层统一使用单引号。</p>
+<p><a name="js-space"></a></p>
+<h2>空格</h2>
+<ul>
+<li>
+<p>不需要使用空格的情况</p>
+<ul>
+<li>对象的属性名后</li>
+<li>前缀一元运算符后</li>
+<li>后缀一元运算符前</li>
+<li>函数调用括号前</li>
+<li>无论是函数声明还是函数表达式，'('前不要空格</li>
+<li>数组的'['后和']'前</li>
+<li>对象的'{'后和'}'前</li>
+<li>运算符'('后和')'前</li>
+</ul>
+</li>
+<li>
+<p>需要空格的情况</p>
+<ul>
+<li>二元运算符前后</li>
+<li>三元运算符 '? :' 前后</li>
+<li>代码块 '{' 前</li>
+<li>下列关键字前：else, while, catch, finally</li>
+<li>下列关键字后：if, else, for, while, do, switch, case, try, catch, finally, with, return, typeof</li>
+<li>单行注释 '//' 后（若单行注释和代码同行，则 '//' 前也需要），多行注释 '*' 后</li>
+<li>对象的属性值前</li>
+<li>for 循环，分号后留有一个空格，前置条件如果有多个，逗号后留一个空格</li>
+<li>无论是函数声明还是函数表达式，'{' 前一定要有空格</li>
+<li>函数的参数之间</li>
+</ul>
+</li>
+</ul>
+<p><a name="js-space-line"></a></p>
+<h2>空行</h2>
+<p>需要空行的情况：</p>
+<ul>
+<li>变量声明后（当变量声明在代码块的最后一行时，则无需空行）</li>
+<li>注释前（当注释在代码块的第一行时，则无需空行）</li>
+<li>代码块后（在函数调用、数组、对象中则无需空行）</li>
+</ul>
+<p><a name="js-br"></a></p>
+<h2>换行</h2>
+<ul>
+<li>
+<p>不需要换行的情况</p>
+<ul>
+<li>关键字 else, catch, finally 后</li>
+<li>代码块 '{' 前</li>
+</ul>
+</li>
+<li>
+<p>需要换行的情况</p>
+<ul>
+<li>代码块'{'后和'}'前</li>
+<li>变量赋值后</li>
+</ul>
+</li>
+</ul>
+<p><a name="js-comment"></a></p>
+<h2>注释</h2>
+<ul>
+<li>
+<p>单行注释</p>
+<ul>
+<li>双斜线后，必须跟一个空格</li>
+<li>缩进与下一行代码保持一致</li>
+</ul>
+</li>
+<li>
+<p>多行注释</p>
+<ul>
+<li>最少三行, '*'后跟一个空格</li>
+<li>使用范围
+<ul>
+<li>难于理解的代码段</li>
+<li>可能存在错误的代码段</li>
+<li>浏览器特殊的HACK代码</li>
+<li>业务逻辑强相关的代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>文档注释</p>
+<ul>
+<li>各类标签 @param, @return, 参考 docblocker 、jsdoc 等插件</li>
+<li>建议在以下情况下使用：
+<ul>
+<li>所有常量</li>
+<li>所有函数</li>
+<li>所有类</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a name="js-variable"></a></p>
+<h2>变量</h2>
+<ul>
+<li>
+<p>变量命名</p>
+<ul>
+<li>标准变量采用驼峰式命名规则</li>
+<li>'ID' 在变量名中全大写</li>
+<li>'URL' 在变量名中全大写</li>
+<li>'Android' 在变量名中大写第一个字母</li>
+<li>'iOS' 在变量名中小写第一个，大写后两个字母</li>
+<li>常量全大写，用下划线连接</li>
+<li>构造函数，大写第一个字母</li>
+<li>jQuery/Zepto 对象必须以 '$' 开头命名</li>
+</ul>
+</li>
+<li>
+<p>变量声明</p>
+<ul>
+<li>单个函数中的变量声明前置，用一个 var 声明</li>
+<li>使用 ES6 语法时，var/let/const的使用</li>
+<li>采用字面量方式声明变量</li>
+</ul>
+</li>
+<li>
+<p>函数</p>
+<ul>
+<li>立即执行函数外必须包一层括号</li>
+<li>不要给inline function命名</li>
+<li>注意函数提升</li>
+</ul>
+</li>
+<li>
+<p>数组/对象</p>
+<ul>
+<li>对象属性名不需要加引号(JSON 对象属性名除外)</li>
+<li>对象缩进遵守缩进规则</li>
+<li>数组中不要存空元素</li>
+</ul>
+</li>
+<li>
+<p>Null</p>
+<ul>
+<li>适用场景
+<ul>
+<li>初始化一个将来可能被赋值为对象的变量</li>
+<li>与已经初始化的变量做比较</li>
+<li>作为一个参数为对象的函数的调用传参</li>
+<li>作为一个返回对象的函数的返回值</li>
+</ul>
+</li>
+<li>不适用场景
+<ul>
+<li>不要用null来判断函数调用时有无传参</li>
+<li>不要与未初始化的变量做比较</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Undefined</p>
+<ul>
+<li>永远不要直接使用 undefined 进行变量判断</li>
+<li>使用 typeof 和字符串 'undefined' 对变量进行判断</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token string" >'undefined'</span> <span class="token operator" >===</span> <span class="token keyword" >typeof</span> a<span class="token punctuation" >;</span>
+<span class="line-numbers-rows"><span></span></span></code></pre>
+<p><a name="js-other"></a></p>
+<h2>其它</h2>
+<ul>
+<li>不要在内置对象的原型上添加方法，如：Array, Date</li>
+<li>不要先使用后声明变量</li>
+<li>不要在同个作用域下声明同名变量</li>
+<li>不要在一些不需要的地方加括号，如：delete (a.b)</li>
+<li>不要使用未声明的变量</li>
+<li>不要声明了变量却不使用</li>
+<li>不要在应该做比较的地方做赋值</li>
+<li>不要在提交的代码里出现debugger</li>
+<li>不要在循环内部声明函数</li>
+<li>不要出现空的代码块(空函数声明除外)</li>
+<li>用'===', '!==' 代替 '==', '!='</li>
+<li>for-in里一定要有hasOwnProperty的判断</li>
+<li>对上下文this的引用只能使用 'me', 'self'其中一个来命名</li>
+</ul>
+<p><a name="js-operator"></a></p>
+<h2>运算符优先级</h2>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.[] ()</td>
+<td>字段访问、数组索引、函数调用和表达式分组</td>
+</tr>
+<tr>
+<td>++ — – ~ ! delete new typeof void</td>
+<td>一元运算符、返回数据类型、对象创建、未定义的值</td>
+</tr>
+<tr>
+<td>* / %</td>
+<td>相乘、相除、求余数</td>
+</tr>
+<tr>
+<td>+ – +</td>
+<td>相加、相减、字符串串联</td>
+</tr>
+<tr>
+<td>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+<td>移位</td>
+</tr>
+<tr>
+<td>&lt; &lt;= &gt; &gt;= instanceof</td>
+<td>小于、小于或等于、大于、大于或等于、是否为特定类的实例</td>
+</tr>
+<tr>
+<td>== != === !==</td>
+<td>相等、不相等、全等，不全等</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>按位“与”</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位“异或”</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>逻辑“与”</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?:</td>
+<td>条件运算</td>
+</tr>
+<tr>
+<td>= OP =</td>
+<td>赋值、赋值运算（如 += 和 &amp;=）</td>
+</tr>
+<tr>
+<td>,</td>
+<td>多个计算</td>
+</tr>
+</tbody>
+</table>
+<p><a name="#sublime"></a></p>
+<h2>SUBLIME 编辑器插件</h2>
+<p><a name="#sublime-settings"></a></p>
+<h3>Sublime settings User</h3>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation" >{</span>
+    <span class="token string" >"color_scheme"</span><span class="token punctuation" >:</span> <span class="token string" >"Packages/Color Scheme - Default/Monokai.tmTheme"</span><span class="token punctuation" >,</span>
+    <span class="token string" >"font_size"</span><span class="token punctuation" >:</span> <span class="token number" >12.0</span><span class="token punctuation" >,</span>
+    <span class="token string" >"tab_size"</span><span class="token punctuation" >:</span> <span class="token number" >4</span><span class="token punctuation" >,</span>
+    <span class="token string" >"draw_white_space"</span><span class="token punctuation" >:</span> <span class="token string" >"all"</span>
+<span class="token punctuation" >}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="#sublime-plugins"></a></p>
+<h3>Sublime plugins</h3>
+<ul>
+<li><a href="https://github.com/wbond/sublime_alignment">Alignment</a>
+=, : 等对齐工具</li>
+<li><a href="https://github.com/facelessuser/BracketHighlighter">BracketHighlighter</a>
+Bracket and tag highlighter for Sublime Text</li>
+<li><a href="https://github.com/seanliang/ConvertToUTF8">ConvertToUTF8</a>
+A Sublime Text 2 &amp; 3 plugin for editing and saving files encoded in GBK, BIG5, EUC-KR, EUC-JP, Shift_JIS, etc.</li>
+<li><a href="http://csscomb.com/">Csscomb</a>
+CSScomb Makes your code beautiful</li>
+<li><a href="http://csslint.net/">CSSLint</a>
+Automated linting of Cascading Stylesheets</li>
+<li><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a>
+Simplifies writing DocBlock comments in Javascript, PHP, CoffeeScript, Actionscript, C &amp; C++</li>
+<li><a href="http://jshint.com/">Jshint</a>
+JSHint, a tool that helps to detect errors and potential problems in your JavaScript code.</li>
+<li><a href="https://github.com/jdc0589/JsFormat">Jsformat</a>
+Javascript, html, json formatting for Sublime Text 2 &amp; 3</li>
+<li><a href="https://github.com/SublimeText-Markdown/MarkdownEditing">MarkdownEditing</a></li>
+<li><a href="https://github.com/revolunet/sublimetext-markdown-preview">MarkdownPreview</a></li>
+<li><a href="http://docs.emmet.io/">Emmet</a>
+Emmet — the essential toolkit for web-developers</li>
+<li><a href="https://packagecontrol.io/packages/Sass">Sass</a>
+Sass support for TextMate &amp; Sublime Text (2 &amp; 3)</li>
+<li><a href="https://wbond.net/sublime_packages/sftp">Sftp</a>
+Spend less time managing file transfers and more time coding. FTP, FTPS and SFTP support for Sublime Text 2 &amp; 3 that is blazing fast, with smart features, flexible workflow options and top-notch support.</li>
+<li><a href="https://github.com/kairyou/SublimeTmpl">SubmimeTmpl</a>
+Create File From Templates for SublimeText 2 / ST3</li>
 </ul>
 
             </div>
